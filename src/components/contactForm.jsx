@@ -20,7 +20,7 @@ class ContactForm extends Form {
   config = {
     tematy: Joi.string()
       .empty("")
-      .label("noichuj"),
+      .label("error"),
     temat: Joi.string().empty(""),
     temat2: Joi.string().empty(""),
     tresc: Joi.string()
