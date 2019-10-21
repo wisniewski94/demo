@@ -1,0 +1,38 @@
+@import '_globals'
+
+*
+    &:hover > .tooltip, a:focus + .tooltip
+        visibility: visible
+        margin-top: 10px
+        opacity: 1
+    .tooltip
+        opacity: 0
+        text-indent: 0px
+        position: relative
+        left: 50%
+        transform: translateX(-50%)
+        margin-top: 5px
+        background-color: #28292F
+        border-radius: 2px
+        color: #DEE1EF
+        padding: 4px
+        line-height: initial
+        display: inline-block
+        visibility: hidden
+        $style: ease-in-out
+        -webkit-transition: $hover-duration $style
+        -moz-transition: $hover-duration $style
+        -ms-transition: $hover-duration $style
+        -o-transition: $hover-duration $style
+        transition: $hover-duration $style
+        &:after
+            content: " "
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 12px 12px 12px 0px
+            border-color: #28292F transparent transparent transparent
+            transform: translateX(-50%) rotate(45deg)
+            position: absolute
+            left: 45%
+            top: -24%

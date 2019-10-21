@@ -1,0 +1,244 @@
+@import '_reset'
+@import '_keyui'
+@import '_globals'
+@import 'fonts'
+    
+*
+    box-sizing: border-box
+
+// *
+//   background-color: rgba(255, 0, 0, 0.2)
+//   outline: 1px solid blue
+//   *
+//     background-color: rgba(0, 255, 0, 0.2)
+//     *
+//       background-color: rgba(0, 0, 255, 0.2)
+//       *
+//         background-color: rgba(255, 0, 255, 0.2)
+//         *
+//           background-color: rgba(0, 255, 255, 0.2)
+//           *
+//             background-color: rgba(255, 255, 0, 0.2)
+//             *
+//               background-color: rgba(255, 0, 0, 0.2)
+//               *
+//                 background-color: rgba(0, 255, 0, 0.2)
+//                 *
+//                    background-color: rgba(0, 0, 255, 0.2)
+//                    *
+//                      background-color: rgba(0, 10, 255, 0.2)
+//                      *
+//                         background-color: rgba(0, 10, 200, 0.2)
+
+
+#root
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+
+#content
+    flex: 1 0 auto
+    padding: 0
+    width: 100%
+    &:after
+        content: '\00a0'
+        display: block
+        height: 0
+        visibility: hidden
+        
+[class*="col-"]
+	width: 100%
+
+@media only screen and (max-width: 600px)
+    .col-s-1
+        width: 8.33%
+    .col-s-2
+        width: 16.66%
+    .col-s-3
+        width: 25%
+    .col-s-4
+        width: 33.33%
+    .col-s-5
+        width: 41.66%
+    .col-s-6
+        width: 50%
+    .col-s-7
+        width: 58.33%
+    .col-s-8
+        width: 66.66%
+    .col-s-9
+        width: 75%
+    .col-s-10
+        width: 83.33%
+    .col-s-11
+        width: 91.66%
+    .col-s-12
+        width: 100%
+
+@media only screen and (min-width: 600px)
+    .col-t-1
+        width: 8.33%
+    .col-t-2
+        width: 16.66%
+    .col-t-3
+        width: 25%
+    .col-t-4
+        width: 33.33%
+    .col-t-5
+        width: 41.66%
+    .col-t-6
+        width: 50%
+    .col-t-7
+        width: 58.33%
+    .col-t-8
+        width: 66.66%
+    .col-t-9
+        width: 75%
+    .col-t-10
+        width: 83.33%
+    .col-t-11
+        width: 91.66%
+    .col-t-12
+        width: 100%
+
+@media only screen and (min-width: 992px)
+    .col-1
+        width: 8.33%
+    .col-2
+        width: 16.66%
+    .col-3
+        width: 25%
+    .col-4
+        width: 33.33%
+    .col-5
+        width: 41.66%
+    .col-6
+        width: 50%
+    .col-7
+        width: 58.33%
+    .col-8
+        width: 66.66%
+    .col-9
+        width: 75%
+    .col-10
+        width: 83.33%
+    .col-11
+        width: 91.66%
+    .col-12
+        width: 100%
+
+[class*="col-"]
+    float: left
+
+.row::after
+    content: ""
+    clear: both
+    display: table
+
+body
+    font-family: Carlito
+    color: #243449
+    background-color: #e7e7e7
+
+textarea, input, select, option
+    font-family: Carlito !important
+    font-size: 16px !important
+
+.layout
+    margin-left: auto
+    margin-right: auto
+    max-width: 1012px
+
+h2
+    font-size: 28px
+    font-family: Roboto Slab
+    font-weight: 600
+
+p
+    color: #576b85
+    font-family: Carlito
+    font-size: 16px
+    text-indent: 50px
+    text-align: justify
+    line-height: 23px
+
+
+@media only screen and (max-width: 992px) 
+    h2
+        font-size: 24px
+    p
+        line-height: 1.375em
+@media only screen and (max-width: 600px) 
+    h2
+        font-size: 22px
+    p
+        line-height: 1.25em
+
+
+button
+    &.transparent
+        @include transparent-btn($def)
+    &.blue
+        @include transparent-btn($blue)
+
+h3
+    font-weight: 600
+    font-size: 22pt
+h4
+    font-weight: 600
+    font-size: 19pt
+h5
+    font-size: 15px
+    font-family: Roboto
+    font-weight: 600
+    letter-spacing: 1.5px
+    text-transform: uppercase
+
+section, header
+    margin-left: auto
+    margin-right: auto
+    max-width: 992px
+span
+    color: #576b85
+    font-family: Carlito
+    font-size: 12pt
+    text-align: justify
+b, label:not(.ui)
+    font-weight: 600
+    color: #000
+a
+    color: #2e84ff
+    font-weight: bold
+    border-radius: 5px
+    padding: 0 4px
+    text-decoration: none
+    outline: none
+    border: 2px solid transparent
+    -webkit-transition: box-shadow .2s
+    -moz-transition: box-shadow .1s
+    -ms-transition: box-shadow .1s
+    -o-transition: box-shadow .1s
+    transition: box-shadow .1s
+    &:focus
+        color: #243449 
+        border: 2px solid #0066ff
+        box-shadow: 0 0 0 2px rgba(165,201,227, 0.8)
+        -webkit-transition: color $hover-duration
+        -moz-transition: color $hover-duration
+        -ms-transition: color $hover-duration
+        -o-transition: color $hover-duration
+        transition: color $hover-duration
+    &:hover
+        color: #243449
+        -webkit-transition: color $hover-duration
+        -moz-transition: color $hover-duration
+        -ms-transition: color $hover-duration
+        -o-transition: color $hover-duration
+        transition: color $hover-duration
+
+.tab
+    background: white
+    border-radius: 4px
+    -webkit-box-shadow: 0px 5px 14px 0px rgba(0,0,0,0.15)
+    -moz-box-shadow: 0px 5px 14px 0px rgba(0,0,0,0.15)
+    box-shadow: 0px 5px 14px 0px rgba(0,0,0,0.15)

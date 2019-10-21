@@ -1,0 +1,61 @@
+@import '_globals'
+
+@media only screen and (min-width: 600px)
+    .griditem
+        &:nth-child(4)
+            .info
+                bottom: 7%
+                h4
+                    margin: auto auto
+                    padding: 4px 16px
+
+@media only screen and (max-width: 600px)
+    .griditem
+            .info
+                bottom: 7%
+                h4
+                    margin: auto auto
+                    padding: 4px 16px
+    
+.griditem
+    .info
+        $radius: 4px
+        position: absolute
+        z-index: 1
+        margin: 0 8%
+        width: 84%
+        height: auto
+        bottom: 7%
+        a
+            padding: 1px 0px 0px
+            top: 2px
+            position: relative
+            left: -2px
+            display: table-cell
+        .wrap
+            background: white
+            text-align: justify
+            padding: 4px 8px
+            border-top-right-radius: $radius
+            border-bottom-left-radius: $radius
+            border-bottom-right-radius: $radius
+            .link
+                padding: 3px 5px
+                overflow: auto
+                display: table-cell
+                a
+                    float: right
+        h4
+            width: fit-content
+            background: white
+            border-top-left-radius: $radius
+            border-top-right-radius: $radius
+            padding: 4px 8px
+            color: #243449
+            -webkit-transition: color $hover-duration
+            -moz-transition: color $hover-duration
+            -ms-transition: color $hover-duration
+            -o-transition: color $hover-duration
+            transition: color $hover-duration
+            &:hover, &:focus
+                color: #1d79fc

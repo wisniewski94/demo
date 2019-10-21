@@ -1,0 +1,120 @@
+@import '_globals'
+    
+$margin: 9px
+
+.griditem
+     form.ui.pag
+        display: table
+        left: 50%
+        right: 50%
+        margin-right: -50%
+        position: absolute
+        bottom: 0px
+        transform: translate(-50%, -50%)
+
+.articleInfo
+    margin: 10px 3% 17px
+    border-bottom: #e4e4e4 solid 1px
+    padding: 0 0 15px
+    position: relative
+    &:last-of-type
+        border-bottom: none
+        margin-bottom: 8px
+        padding-bottom: 0px
+    .thumb, .heading
+        float: left
+        vertical-align: top
+    .wrapper
+        width: 100%
+    .thumb
+        width: 30%
+        margin-right: $margin
+        padding-bottom: 30%
+        position: relative
+        a 
+            padding: 0px
+            position: absolute
+            overflow: hidden
+            img
+                object-fit: cover
+                width: 100%
+                min-height: 100%
+                $style: ease-in-out
+                transform: translate(-50%, -50%) scale(1.05)
+                -webkit-transition: transform $hover-duration $style
+                -moz-transition: transform $hover-duration $style
+                -ms-transition: transform $hover-duration $style
+                -o-transition: transform $hover-duration $style
+                transition: transform $hover-duration $style
+            &:hover > img
+                -webkit-transform: translate(-50%, -50%) scale(1.15)
+                -moz-transform: translate(-50%, -50%) scale(1.15)
+                -ms-transform: translate(-50%, -50%) scale(1.15)
+                -o-transform: translate(-50%, -50%) scale(1.15)
+                transform: translate(-50%, -50%) scale(1.15)
+
+    .heading
+        top: 3px
+        width: calc(70% - #{$margin})
+        .tags
+            display: inline-block
+            max-width: 100%
+            text-transform: uppercase
+            a
+                background-color: #f1f6f9
+                margin-right: 6px
+                margin-bottom: 6px
+                width: auto
+                &:hover, &:focus
+                    background-color: #f1f1f1
+        .title
+            font-family: 'Roboto Slab'
+            font-size: 20px
+            font-weight: 600
+            text-align: justify
+            display: block
+            color: #4f5e72
+            padding: 3px
+            &:hover, &:focus
+                color: #1d79fc
+    .desc
+        padding: 3px
+    .more
+        margin-top: 2px
+        float: right
+        position: relative
+        width: initial
+    &::after
+        content: ""
+        clear: both
+        display: table
+
+@media only screen and (max-width: 1007px)
+    $thumb: 200px
+    .articleInfo
+        .thumb
+            width: $thumb
+            padding-bottom: $thumb
+        .heading
+            width: calc(100% - #{$thumb} - #{$margin})
+
+@media only screen and (max-width: 700px)
+    $thumb: 150px
+    .articleInfo
+        .thumb
+            width: $thumb
+            padding-bottom: $thumb
+        .heading
+            width: calc(100% - #{$thumb} - #{$margin})
+
+@media only screen and (max-width: 400px)
+    $thumb: 100px
+    .articleInfo
+        .thumb
+            width: $thumb
+            padding-bottom: $thumb
+        .heading
+            width: calc(100% - #{$thumb} - #{$margin})
+    .griditem
+        form.ui.pag
+            bottom: -10px

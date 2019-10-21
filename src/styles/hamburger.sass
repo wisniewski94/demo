@@ -1,0 +1,70 @@
+@import '_globals'
+
+@media only screen and (max-width: 992px) 
+    .hamburger
+        width: 30px
+        height: 30px
+        padding: 3px
+        border-radius: 4px
+        position: relative
+        border: 2px solid transparent
+        cursor: pointer
+        float: right
+        margin: 7px 3px 7px 0px
+        outline: none
+        &:focus
+            color: #243449 
+            border: 2px solid #0066ff
+            box-shadow: 0 0 0 2px rgba(165,201,227, 0.8)
+            -webkit-transition: color $hover-duration
+            -moz-transition: color $hover-duration
+            -ms-transition: color $hover-duration
+            -o-transition: color $hover-duration
+            transition: color $hover-duration
+        &:hover span
+            background: #2e84ff
+        span
+            display: block
+            z-index: -1
+            position: relative
+            height: 22%
+            width: 100%
+            border-radius: 2px
+            opacity: 1
+            left: 0
+            background: #243449
+            -webkit-transition: $hover-duration
+            -moz-transition:  $hover-duration
+            -ms-transition: $hover-duration
+            -o-transition: $hover-duration
+            transition: $hover-duration
+            -webkit-transform-origin: left center
+            -moz-transform-origin: left center
+            -o-transform-origin: left center
+            transform-origin: left center
+            &:nth-child(1)
+                top: 0%
+            &:nth-child(2)
+                top: 19%
+            &:nth-child(3)
+                top: 40%
+    .open
+        span
+            left: 15%
+            &:nth-child(1)
+                -webkit-transform: rotate(45deg)
+                -moz-transform: rotate(45deg)
+                -o-transform: rotate(45deg)
+                transform: rotate(45deg)
+                top: 5%
+            &:nth-child(2)
+                width: 0%
+                opacity: 0
+            &:nth-child(3)
+                -webkit-transform: rotate(-45deg)
+                -moz-transform: rotate(-45deg)
+                -o-transform: rotate(-45deg)
+                transform: rotate(-45deg)
+                top: 35%
+        + .menu
+            right: 0
