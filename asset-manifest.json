@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/demo/static/css/main.ea5f02bf.chunk.css",
+    "main.js": "/demo/static/js/main.a6f062b0.chunk.js",
+    "main.js.map": "/demo/static/js/main.a6f062b0.chunk.js.map",
+    "runtime~main.js": "/demo/static/js/runtime~main.96f7b30f.js",
+    "runtime~main.js.map": "/demo/static/js/runtime~main.96f7b30f.js.map",
+    "static/css/2.1ad9c816.chunk.css": "/demo/static/css/2.1ad9c816.chunk.css",
+    "static/js/2.fe47b33f.chunk.js": "/demo/static/js/2.fe47b33f.chunk.js",
+    "static/js/2.fe47b33f.chunk.js.map": "/demo/static/js/2.fe47b33f.chunk.js.map",
+    "index.html": "/demo/index.html",
+    "precache-manifest.163855f58f0c3e13d63ff956e83ba36b.js": "/demo/precache-manifest.163855f58f0c3e13d63ff956e83ba36b.js",
+    "service-worker.js": "/demo/service-worker.js",
+    "static/css/2.1ad9c816.chunk.css.map": "/demo/static/css/2.1ad9c816.chunk.css.map",
+    "static/css/main.ea5f02bf.chunk.css.map": "/demo/static/css/main.ea5f02bf.chunk.css.map",
+    "static/media/App.sass": "/demo/static/media/RobotoSlab-Regular.1ec06eed.ttf"
+  }
+}
